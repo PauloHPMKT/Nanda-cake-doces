@@ -1,0 +1,436 @@
+/*--------------------- imports ---------------------*/
+
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+@import url("./variable.css");
+@import url("./lightbox.css");
+@import url("./header.css");
+
+/*--------------------- page setup ---------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  color: var(--main-color-white);
+}
+body {
+  font-family: "Lobster", display;
+  background-image: linear-gradient(
+      rgba(105, 101, 101, 0.7),
+      rgba(28, 55, 128, 0.3)
+    ),
+    url("../images/new-cake.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/*--------------------- section 1 setup ---------------------*/
+.bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.bg .content-into {
+  max-width: 80%;
+  text-align: center;
+  margin-top: 70px;
+}
+.bg .content-into h1 {
+  font-family: "century gothic";
+  font-size: 80px;
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 2px var(--main-color-blue);
+}
+.bg .content-into span {
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 2px var(--main-color-blue);
+  margin-top: 10px;
+  font-size: 35px;
+  display: block;
+}
+.bg .content-into .btn-add {
+  padding: 15px 25px;
+  font-size: 26px;
+  font-family: "century gothic";
+  font-weight: bold;
+  background: transparent;
+  border: 5px solid var(--main-color-white);
+  border-radius: 10px;
+  color: var(--main-color-white);
+  margin-top: 20px;
+  cursor: pointer;
+}
+.bg .content-into .btn-add:hover {
+  border: 5px solid var(--main-color-pink);
+  background-color: rgba(255, 192, 203, 0.664);
+  transition: 400ms ease;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section bg---------------------*/
+@media (min-width: 620px) and (max-width: 1100px) {
+  .bg .content-into h1 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 619px) {
+  .bg .content-into h1 {
+    font-size: 40px;
+  }
+  .bg .content-into span {
+    font-size: 25px;
+  }
+}
+/*---------------------end of section bg rules---------------------*/
+
+/*--------------------- section 2 setup ---------------------*/
+.main-container {
+  font-family: "century gothic";
+
+  display: flex;
+  background-color: var(--main-color-pink);
+  color: var(--main-color-white);
+  padding: 80px;
+}
+.main-container .content-one {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .content-one h3 {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+}
+.main-container .content-one img {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 5px solid pink;
+  filter: drop-shadow(0 0 5px rgb(160, 62, 62));
+}
+.main-container .content-two {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 30px;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section main container---------------------*/
+@media (min-width: 470px) and (max-width: 1200px) {
+  .main-container .content-one h3 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1044px) {
+  .main-container {
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+  }
+  .main-container .content-one,
+  .main-container .content-two {
+    width: 100%;
+  }
+  .main-container .content-one span {
+    display: block;
+  }
+  .main-container .content-two {
+    padding-left: 0;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 470px) {
+  .main-container .content-one h3 {
+    font-size: 20px;
+  }
+}
+/*---------------------end of section main container rules---------------------*/
+
+/*--------------------- section 3 setup ---------------------*/
+.instagram {
+  background-image: url("../images/brigadeiro-brazil.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 2px var(--main-color-blue);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px 0;
+}
+.instagram .follow-us {
+  font-family: "century gothic";
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.instagram .follow-us span {
+  font-family: "Lobster";
+}
+.instagram .follow-us a:hover {
+  color: var(--main-color-pink);
+  transition: 400ms ease;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section instagram---------------------*/
+@media (min-width: 320px) and (max-width: 810px) {
+  .instagram .follow-us {
+    font-size: 30px;
+  }
+}
+/*---------------------end of section instagram rules---------------------*/
+
+/*--------------------- section 4 setup ---------------------*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery div {
+  width: 33.3%;
+  height: 450px;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+.gallery .text-gallery {
+  background-image: linear-gradient(pink, #e67d8e);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  height: 100px;
+  width: 100%;
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 2px var(--main-color-blue);
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section gallery---------------------*/
+@media (min-width: 1200px) and (max-width: 1305px) {
+  .gallery div {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .gallery div {
+    height: 350px;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 999px) {
+  .gallery div {
+    height: 300px;
+  }
+}
+
+@media (min-width: 655px) and (max-width: 879px) {
+  .gallery {
+    background-color: var(--main-color-pink);
+  }
+  .gallery div {
+    width: 100%;
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 654px) {
+  .gallery {
+    background-color: var(--main-color-pink);
+  }
+  .gallery div {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+/*---------------------end of section gallery rules---------------------*/
+
+/*--------------------- section 5 setup ---------------------*/
+.trabalhamos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(pink, #e67d8e);
+  text-align: center;
+  font-size: 40px;
+  font-family: "century gothic";
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 5px #d3678b;
+  padding: 100px 0;
+}
+.trabalhamos ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+}
+.trabalhamos li {
+  padding: 30px;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section trabalhamos---------------------*/
+@media (min-width: 950px) and (max-width: 1305px) {
+  .trabalhamos ul {
+    font-size: 30px;
+  }
+  .trabalhamos li {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 950px) {
+  .trabalhamos {
+    padding: 30px;
+    font-size: 30px;
+  }
+  .trabalhamos ul {
+    display: block;
+    padding: 20px;
+  }
+  .trabalhamos li {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .trabalhamos li {
+    font-size: 26px;
+  }
+}
+/*---------------------end of section trabalhamos rules---------------------*/
+
+/*--------------------- section 6 setup ---------------------*/
+.contatos {
+  display: flex;
+  font-size: 40px;
+  font-family: "century gothic";
+  padding: 100px 0;
+  color: var(--main-color-white);
+  text-shadow: 2px 2px 2px #085668;
+  background-image: linear-gradient(var(--main-color-blue), #3bb6d1);
+}
+.contatos .contato-sec {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contatos .contato-sec span {
+  font-size: 26px;
+}
+.contatos .contato-dados {
+  width: 50%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+.contatos .contato-dados a {
+  margin-bottom: 10px;
+}
+.contatos .contato-dados a:hover {
+  color: var(--main-color-pink);
+  transition: 400ms ease;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section contacts---------------------*/
+@media (min-width: 1107px) and (max-width: 1220px) {
+  .contatos {
+    font-size: 25px;
+  }
+  .contatos .contato-dados {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1106px) {
+  .contatos {
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 20px;
+  }
+  .contatos .contato-sec {
+    width: 80%;
+  }
+  .contatos .contato-sec span {
+    font-size: 20px;
+  }
+
+  .contatos .contato-dados {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 80%;
+  }
+  .contatos .contato-sec,
+  .contatos .contato-dados {
+    padding: 30px 0;
+  }
+}
+/*---------------------end of section trabalhamos rules---------------------*/
+
+/*--------------------- section 7 setup ---------------------*/
+.footer {
+  color: var(--main-color-white);
+  border-top: 1px solid gray;
+  background-color: #3bb6d1;
+  font-size: 20px;
+  font-family: "century gothic";
+  text-align: center;
+  padding: 40px 0;
+}
+
+/*--------------------- media query ---------------------*/
+/*--------------------- media query section footer---------------------*/
+@media (min-width: 1107px) and (max-width: 1220px) {
+  .footer {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1107px) {
+  .footer {
+    font-size: 16px;
+  }
+}

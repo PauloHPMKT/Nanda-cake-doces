@@ -1,0 +1,113 @@
+/*--------------------- header / menu setup ---------------------*/
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 105px;
+  padding: 0 150px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.header-top .logo {
+  width: 120px;
+}
+.header-top .nav-bar .menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 25px 0;
+  list-style: none;
+}
+
+.header-top .nav-bar .menu li {
+  padding: 0 20px;
+  color: #fff;
+  font-size: 26px;
+}
+
+.header-top .nav-bar .menu li a {
+  color: #fff;
+}
+
+.header-top .nav-bar .menu a:hover {
+  color: #107ebd;
+  transition: 400ms ease;
+}
+
+/*------------------effect header menu js-----------------*/
+.menuColorized {
+  background-color: #f49090c2;
+  animation: dropDown 1000ms ease-in-out;
+}
+
+@keyframes dropDown {
+  0% {
+    height: 10px;
+  }
+  50%,
+  100% {
+    height: 12.75%;
+  }
+}
+
+/*------------------------------menu hamburguer responsive---------------------------------*/
+.header-top .nav-bar .checkbtn {
+  display: none;
+}
+.header-top .nav-bar .checkbtn img {
+  width: 50px;
+  cursor: pointer;
+}
+
+/*------------------------------menu mobile responsive---------------------------------*/
+.menu-js {
+  background-color: var(--main-color-pink);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: all 800ms ease;
+  padding-top: 105px;
+}
+
+.menu-js li {
+  padding: 50px 0;
+  color: white;
+  font-size: 26px;
+  border-bottom: 1px solid pink;
+}
+
+.menu-js.aberto {
+  right: 0;
+}
+
+/*--------------------------query header------------------------*/
+@media (min-width: 320px) and (max-width: 1200px) {
+  .header-top {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 870px) {
+  .header-top .logo {
+    width: 80px;
+  }
+  .menuColorized {
+    background-color: transparent;
+  }
+  .header-top .nav-bar .menu {
+    display: none;
+  }
+  .header-top .nav-bar .checkbtn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 1;
+  }
+}
